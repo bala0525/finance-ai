@@ -1,0 +1,183 @@
+
+
+/* ================================
+   Global Reset
+================================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-width: 320px;
+  min-height: 100vh;
+  background-color: var(--color-bg-primary);
+  color: var(--color-text-primary);
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-normal);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ================================
+   Root
+================================= */
+
+#root {
+  min-height: 100vh;
+}
+
+/* ================================
+   Links
+================================= */
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+/* ================================
+   Buttons
+================================= */
+
+button {
+  border: 0;
+  cursor: pointer;
+}
+
+button:disabled {
+  cursor: not-allowed;
+}
+
+/* ================================
+   Images
+================================= */
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+/* ================================
+   Lists
+================================= */
+
+ul,
+ol {
+  list-style: none;
+}
+
+/* ================================
+   Forms
+================================= */
+
+input,
+textarea,
+select {
+  outline: none;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: var(--color-text-disabled);
+}
+
+/* ================================
+   Selection
+================================= */
+
+::selection {
+  background: var(--color-accent-primary);
+  color: var(--color-bg-primary);
+}
+
+/* ================================
+   Scrollbar
+================================= */
+
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-bg-secondary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-border-secondary);
+  border-radius: var(--radius-md);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-accent-primary);
+}
+
+/* ================================
+   Utility
+================================= */
+
+.hidden {
+  display: none !important;
+}
+
+/* ===== AZENTMART GLOBAL DARK FORM THEME ===== */
+:root {
+  color-scheme: dark;
+}
+
+input:not([type="checkbox"]):not([type="radio"]):not([type="file"]),
+textarea,
+select {
+  background-color: #0d1728 !important;
+  color: #e5edf8 !important;
+  border: 1px solid #263750 !important;
+  border-radius: 8px;
+  outline: none;
+  accent-color: #22d3ee;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #8293aa !important;
+  opacity: 1;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  border-color: #22a9d0 !important;
+  box-shadow: 0 0 0 2px rgba(34, 211, 238, 0.12);
+}
+
+select option {
+  background: #0d1728;
+  color: #e5edf8;
+}
+
+input:disabled,
+textarea:disabled,
+select:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+  accent-color: #22d3ee;
+}

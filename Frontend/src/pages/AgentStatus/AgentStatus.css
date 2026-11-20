@@ -1,0 +1,546 @@
+.agent-status-page {
+  width: 100%;
+  max-width: 1500px;
+  margin: 0 auto;
+}
+
+.agent-status-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 24px;
+  margin-bottom: 28px;
+}
+
+.agent-status-eyebrow,
+.agent-status-section-label {
+  display: block;
+  color: #6f839d;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.agent-status-header h1 {
+  margin: 7px 0 6px;
+  color: #f3f7fb;
+  font-size: 28px;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+}
+
+.agent-status-header p {
+  margin: 0;
+  max-width: 680px;
+  color: #8393a8;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.agent-status-live {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  border: 1px solid rgba(54, 211, 153, 0.2);
+  border-radius: 6px;
+  background: rgba(54, 211, 153, 0.05);
+  color: #6ee7b7;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  white-space: nowrap;
+}
+
+.agent-status-live-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #34d399;
+  box-shadow: 0 0 10px rgba(52, 211, 153, 0.65);
+}
+
+.agent-status-overview {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 14px;
+  margin-bottom: 20px;
+}
+
+.agent-status-overview-card {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  min-height: 88px;
+  padding: 17px;
+  border: 1px solid #1b2b3e;
+  border-radius: 8px;
+  background: #0c1522;
+}
+
+.agent-status-card-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  flex-shrink: 0;
+  border: 1px solid #1c3850;
+  border-radius: 7px;
+  background: #0b1c2d;
+  color: #43b9ff;
+  font-size: 15px;
+}
+
+.agent-status-overview-card span {
+  display: block;
+  margin-bottom: 5px;
+  color: #72849a;
+  font-size: 11px;
+}
+
+.agent-status-overview-card strong {
+  color: #f1f5f9;
+  font-size: 23px;
+  font-weight: 700;
+}
+
+.agent-status-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  margin-bottom: 16px;
+}
+
+.agent-status-search {
+  display: flex;
+  align-items: center;
+  width: min(430px, 100%);
+  height: 40px;
+  padding: 0 12px;
+  border: 1px solid #1b2b3e;
+  border-radius: 6px;
+  background: #0c1522;
+}
+
+.agent-status-search span {
+  margin-right: 9px;
+  color: #61758e;
+  font-size: 17px;
+}
+
+.agent-status-search input {
+  width: 100%;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  color: #dbe7f3;
+  font-size: 12px;
+}
+
+.agent-status-search input::placeholder {
+  color: #5e7087;
+}
+
+.agent-status-filter {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+}
+
+.agent-status-filter label {
+  color: #71839a;
+  font-size: 11px;
+}
+
+.agent-status-filter select {
+  min-width: 130px;
+  height: 40px;
+  padding: 0 11px;
+  border: 1px solid #1b2b3e;
+  border-radius: 6px;
+  outline: none;
+  background: #0c1522;
+  color: #dce6f1;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.agent-status-table-wrapper,
+.agent-status-info-card {
+  overflow: hidden;
+  border: 1px solid #1b2b3e;
+  border-radius: 8px;
+  background: #0c1522;
+}
+
+.agent-status-table-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 20px;
+  border-bottom: 1px solid #18283a;
+}
+
+.agent-status-table-header h2,
+.agent-status-info-header h2 {
+  margin: 5px 0 0;
+  color: #edf3f8;
+  font-size: 15px;
+  font-weight: 650;
+}
+
+.agent-status-count {
+  color: #667b94;
+  font-size: 11px;
+}
+
+.agent-status-table-scroll {
+  overflow-x: auto;
+}
+
+.agent-status-table {
+  width: 100%;
+  min-width: 900px;
+  border-collapse: collapse;
+}
+
+.agent-status-table th {
+  padding: 11px 20px;
+  border-bottom: 1px solid #18283a;
+  background: #0a131f;
+  color: #62768f;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-align: left;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.agent-status-table td {
+  padding: 15px 20px;
+  border-bottom: 1px solid #152538;
+  color: #bdc9d6;
+  font-size: 12px;
+  vertical-align: middle;
+}
+
+.agent-status-table tbody tr:last-child td {
+  border-bottom: 0;
+}
+
+.agent-status-table tbody tr:hover {
+  background: rgba(26, 48, 70, 0.22);
+}
+
+.agent-status-agent {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  min-width: 270px;
+}
+
+.agent-status-agent-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  flex-shrink: 0;
+  border: 1px solid #1d3a52;
+  border-radius: 6px;
+  background: #0b1c2c;
+  color: #42b9ff;
+  font-size: 12px;
+}
+
+.agent-status-agent strong {
+  display: block;
+  margin-bottom: 3px;
+  color: #e0e8f0;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.agent-status-agent span {
+  display: block;
+  color: #61758d;
+  font-size: 10px;
+}
+
+.agent-status-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 8px;
+  border-radius: 5px;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+}
+
+.agent-status-badge i,
+.agent-status-health i {
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+}
+
+.agent-status-badge.active {
+  border: 1px solid rgba(52, 211, 153, 0.2);
+  background: rgba(52, 211, 153, 0.07);
+  color: #6ee7b7;
+}
+
+.agent-status-badge.active i {
+  background: #34d399;
+}
+
+.agent-status-badge.idle {
+  border: 1px solid rgba(251, 191, 36, 0.2);
+  background: rgba(251, 191, 36, 0.07);
+  color: #fcd34d;
+}
+
+.agent-status-badge.idle i {
+  background: #fbbf24;
+}
+
+.agent-status-badge.failed {
+  border: 1px solid rgba(248, 113, 113, 0.2);
+  background: rgba(248, 113, 113, 0.07);
+  color: #fca5a5;
+}
+
+.agent-status-badge.failed i {
+  background: #f87171;
+}
+
+.agent-status-health {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: #73d9ad;
+  font-size: 10px;
+  font-weight: 600;
+}
+
+.agent-status-health i {
+  background: #34d399;
+}
+
+.agent-status-number {
+  color: #dce6ef;
+  font-weight: 650;
+}
+
+.agent-status-success {
+  color: #70d9b0;
+  font-weight: 650;
+}
+
+.agent-status-last-activity {
+  color: #75889f;
+  white-space: nowrap;
+}
+
+.agent-status-bottom-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  margin-top: 14px;
+}
+
+.agent-status-info-card {
+  padding: 19px;
+}
+
+.agent-status-info-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 18px;
+}
+
+.agent-status-healthy-badge {
+  padding: 5px 8px;
+  border: 1px solid rgba(52, 211, 153, 0.2);
+  border-radius: 5px;
+  background: rgba(52, 211, 153, 0.06);
+  color: #6ee7b7;
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+
+.agent-status-health-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.agent-status-health-list div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 11px 12px;
+  border: 1px solid #17283a;
+  border-radius: 6px;
+  background: #0a131f;
+}
+
+.agent-status-health-list span {
+  color: #74879d;
+  font-size: 10px;
+}
+
+.agent-status-health-list strong {
+  color: #6ee7b7;
+  font-size: 9px;
+  font-weight: 650;
+}
+
+.agent-status-policy-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 25px;
+  height: 25px;
+  border: 1px solid rgba(67, 185, 255, 0.2);
+  border-radius: 5px;
+  background: rgba(67, 185, 255, 0.06);
+  color: #43b9ff;
+  font-size: 11px;
+}
+
+.agent-status-policy-text {
+  margin: 0 0 15px;
+  color: #7d8fa4;
+  font-size: 11px;
+  line-height: 1.7;
+}
+
+.agent-status-policy-items {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+}
+
+.agent-status-policy-items span {
+  padding: 6px 8px;
+  border: 1px solid #1a2c40;
+  border-radius: 5px;
+  background: #0a131f;
+  color: #91a1b3;
+  font-size: 9px;
+}
+
+.agent-status-state {
+  display: flex;
+  min-height: 260px;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 8px;
+  border: 1px solid #1b2b3e;
+  border-radius: 8px;
+  background: #0c1522;
+  text-align: center;
+}
+
+.agent-status-state p {
+  margin: 0;
+  color: #6f8197;
+  font-size: 11px;
+}
+
+.agent-status-state strong {
+  color: #dfe8f1;
+  font-size: 13px;
+}
+
+.agent-status-loader {
+  width: 24px;
+  height: 24px;
+  margin-bottom: 4px;
+  border: 2px solid #1a3148;
+  border-top-color: #43b9ff;
+  border-radius: 50%;
+  animation: agentStatusSpin 0.8s linear infinite;
+}
+
+.agent-status-empty-icon {
+  color: #4d627a;
+  font-size: 24px;
+}
+
+.agent-status-error {
+  border-color: rgba(248, 113, 113, 0.2);
+}
+
+.agent-status-error strong {
+  color: #fca5a5;
+}
+
+@keyframes agentStatusSpin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 1100px) {
+  .agent-status-overview {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .agent-status-bottom-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 700px) {
+  .agent-status-header {
+    flex-direction: column;
+  }
+
+  .agent-status-overview {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .agent-status-toolbar {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .agent-status-search {
+    width: 100%;
+  }
+
+  .agent-status-filter {
+    justify-content: space-between;
+  }
+
+  .agent-status-filter select {
+    flex: 1;
+  }
+
+  .agent-status-health-list {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .agent-status-overview {
+    grid-template-columns: 1fr;
+  }
+
+  .agent-status-header h1 {
+    font-size: 24px;
+  }
+}

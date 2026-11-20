@@ -1,0 +1,46 @@
+.app-loading { min-height:180px; display:flex; align-items:center; justify-content:center; gap:12px; color:#8ea4bd; font-size:12px; }
+.app-loading-dot { width:8px; height:8px; border-radius:50%; background:#35b8e8; box-shadow:0 0 0 5px rgba(53,184,232,.12); animation:skeleton-pulse 1.15s ease-in-out infinite; }
+.skeleton-block { display:block; max-width:100%; border-radius:5px; background:linear-gradient(90deg,#142237 20%,#20334d 38%,#142237 62%); background-size:400% 100%; animation:skeleton-shimmer 1.35s ease infinite; }
+.skeleton-rounded { border-radius:999px; }
+.skeleton-card-grid { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:12px; margin:18px 0; }
+.skeleton-card { min-height:112px; padding:16px; border:1px solid #1c2d43; border-radius:9px; background:#0c1728; }
+.skeleton-table { overflow:hidden; border:1px solid #1c2d43; border-radius:9px; background:#0c1728; }
+.skeleton-table-row { min-height:48px; display:grid; grid-template-columns:1.4fr repeat(4,1fr); align-items:center; gap:18px; padding:0 15px; border-bottom:1px solid #17283c; }
+.skeleton-table-head { min-height:38px; background:#101e31; }
+.skeleton-workspace { display:grid; gap:8px; }
+@keyframes skeleton-shimmer { 0% { background-position:100% 0; } 100% { background-position:0 0; } }
+@keyframes skeleton-pulse { 50% { opacity:.45; transform:scale(.88); } }
+@media(max-width:760px) { .skeleton-card-grid { grid-template-columns:repeat(2,minmax(0,1fr)); } .skeleton-table-row { gap:8px; padding:0 9px; } }
+@media(prefers-reduced-motion:reduce) { .skeleton-block,.app-loading-dot { animation:none; } }
+
+/* ===== CONSISTENT ENTERPRISE SKELETON LOADING ===== */
+.skeleton-block {
+  background: linear-gradient(
+    90deg,
+    #111c2e 20%,
+    #1c3049 45%,
+    #111c2e 70%
+  );
+  background-size: 300% 100%;
+  animation: skeleton-shimmer 1.45s ease-in-out infinite;
+}
+
+.skeleton-card,
+.skeleton-table {
+  background: #0d1728;
+  border-color: #263750;
+}
+
+.skeleton-table-row {
+  border-bottom-color: #1b2a40;
+}
+
+.skeleton-table-head {
+  background: #111e31;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .skeleton-block {
+    animation: none;
+  }
+}

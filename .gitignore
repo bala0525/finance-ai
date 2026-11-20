@@ -1,0 +1,33 @@
+# Environment and secrets
+.env
+.env.*
+!.env.example
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+
+# Node
+node_modules/
+build/
+dist/
+
+# IDE and OS
+.DS_Store
+.vscode/
+.idea/
+
+# Logs and temporary files
+*.log
+uploads/
+tmp/
+
+# Backup files
+*.bak
+*.backup
+*.before_*
+*.approval-backup
+*_backup_*/

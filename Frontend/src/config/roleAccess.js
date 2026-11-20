@@ -1,0 +1,33 @@
+/** Frontend visibility only; backend endpoint authorization is the security boundary. */
+export const ROLE_NAMES = {
+  EMPLOYEE: "Employee / Requester",
+  FINANCE_USER: "Finance User",
+  FINANCE_MANAGER: "Finance Manager",
+  CHIEF_ACCOUNTANT: "Chief Accountant",
+  ADMIN: "Administrator",
+};
+
+export const AGENT_ACCESS = {
+  "accounts-payable": [ROLE_NAMES.FINANCE_USER, ROLE_NAMES.FINANCE_MANAGER, ROLE_NAMES.CHIEF_ACCOUNTANT, ROLE_NAMES.ADMIN],
+  "accounts-receivable": [ROLE_NAMES.FINANCE_USER, ROLE_NAMES.FINANCE_MANAGER, ROLE_NAMES.CHIEF_ACCOUNTANT, ROLE_NAMES.ADMIN],
+  "invoice-processing": [ROLE_NAMES.EMPLOYEE, ROLE_NAMES.FINANCE_USER, ROLE_NAMES.FINANCE_MANAGER, ROLE_NAMES.CHIEF_ACCOUNTANT, ROLE_NAMES.ADMIN],
+  reconciliation: [ROLE_NAMES.FINANCE_USER, ROLE_NAMES.FINANCE_MANAGER, ROLE_NAMES.CHIEF_ACCOUNTANT, ROLE_NAMES.ADMIN],
+  "finance-analyst": [ROLE_NAMES.FINANCE_MANAGER, ROLE_NAMES.CHIEF_ACCOUNTANT, ROLE_NAMES.ADMIN],
+  "expense-employee": [ROLE_NAMES.EMPLOYEE, ROLE_NAMES.FINANCE_USER, ROLE_NAMES.FINANCE_MANAGER, ROLE_NAMES.CHIEF_ACCOUNTANT, ROLE_NAMES.ADMIN],
+  "financial-reporting": [ROLE_NAMES.FINANCE_USER, ROLE_NAMES.FINANCE_MANAGER, ROLE_NAMES.CHIEF_ACCOUNTANT, ROLE_NAMES.ADMIN],
+  "fraud-detection": [ROLE_NAMES.FINANCE_MANAGER, ROLE_NAMES.CHIEF_ACCOUNTANT, ROLE_NAMES.ADMIN],
+};
+
+export function getRoleName(user) {
+  return user?.role_name || user?.role?.name || ({
+    1: ROLE_NAMES.ADMIN,
+    2: ROLE_NAMES.FINANCE_MANAGER,
+    3: ROLE_NAMES.FINANCE_USER,
+    4: ROLE_NAMES.EMPLOYEE,
+    5: ROLE_NAMES.CHIEF_ACCOUNTANT,
+  }[user?.role_id] || ROLE_NAMES.EMPLOYEE);
+}
+
+export function canAccessAgent(user, agentPath) {
+  return Boolean(AGENT_ACCESS[agentPath]?.includes(getRoleName(user)));
+}

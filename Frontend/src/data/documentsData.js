@@ -1,0 +1,70 @@
+export const documentsMockData = [
+  {
+    id: 1,
+    name: "Annual Financial Report 2025.pdf",
+    type: "PDF",
+    size: "4.8 MB",
+    category: "Financial Report",
+    uploadedAt: "08 Oct 2026",
+    status: "PROCESSED",
+  },
+  {
+    id: 2,
+    name: "Accounts Payable Ledger.xlsx",
+    type: "XLSX",
+    size: "1.2 MB",
+    category: "Accounts Payable",
+    uploadedAt: "07 Oct 2026",
+    status: "PROCESSED",
+  },
+  {
+    id: 3,
+    name: "Supplier Invoice Batch - October.pdf",
+    type: "PDF",
+    size: "8.4 MB",
+    category: "Invoices",
+    uploadedAt: "07 Oct 2026",
+    status: "PROCESSING",
+  },
+  {
+    id: 4,
+    name: "Expense Policy 2026.pdf",
+    type: "PDF",
+    size: "860 KB",
+    category: "Policy",
+    uploadedAt: "06 Oct 2026",
+    status: "PROCESSED",
+  },
+  {
+    id: 5,
+    name: "Bank Reconciliation September.xlsx",
+    type: "XLSX",
+    size: "2.1 MB",
+    category: "Reconciliation",
+    uploadedAt: "05 Oct 2026",
+    status: "PROCESSED",
+  },
+  {
+    id: 6,
+    name: "Management Reporting Pack Q3.pdf",
+    type: "PDF",
+    size: "3.6 MB",
+    category: "Financial Report",
+    uploadedAt: "04 Oct 2026",
+    status: "PENDING",
+  },
+];
+
+// Must match the backend classifier categories exactly
+// (backend/app/services/document_classifier.py ALLOWED_CATEGORIES).
+export const documentCategories = [
+  "All Categories",
+  "Accounts Payable",
+  "Accounts Receivable",
+  "Invoice",
+  "Reconciliation",
+  "Expense",
+  "Financial Report",
+  "Policy",
+  "Uncategorized",
+];
