@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Azentmart Finance AI
 
 React 18 / Create React App frontend with a FastAPI, SQLAlchemy, PostgreSQL and Supabase Storage backend.
@@ -17,3 +18,6 @@ Follow `INTEGRATION_SETUP.md`. Copy `backend/.env.example` to `backend/.env` and
 
 ## Important
 This archive is an implementation work-in-progress, not a production-certified release. Stripe and SMTP require credentials and test-mode verification; database migrations must be tested against a disposable PostgreSQL database before deployment. See `IMPLEMENTATION_STATUS.md` for exact validation and unfinished work.
+=======
+# azentmart-finance-ai
+>>>>>>> origin/main
